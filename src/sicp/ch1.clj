@@ -1,6 +1,6 @@
 (ns sicp.ch1)
 
-;; 1.3
+;; ex 1.3
 (defn sqr [x]
 	(* x x))
 
@@ -19,3 +19,11 @@
 			(sqr-sum x y) 
 			(sqr-sum y z))))
 ;; end 1.3
+
+;; ex 1.11
+(defn f-rec [n]
+	(if (< n 3) n 
+		(+	(f-rec (- n 1))
+			(f-rec (- n 2))
+			(f-rec (- n 3)))))
+;; end 1.11
