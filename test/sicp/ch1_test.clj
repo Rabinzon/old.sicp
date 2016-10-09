@@ -10,3 +10,10 @@
 		(assert-equal (biggest-sqr-sum 2 2 3) 13)
 		(assert-equal (biggest-sqr-sum 1 2 0) 5)
 		(assert-equal (biggest-sqr-sum 2 0 1) 5)))
+
+(deftest ch1-1-11-test
+	(testing "f-rec is failed"
+		(assert-equal (f-rec 2) 2)
+		(assert-equal (f-rec 5) 11)
+		(assert-equal (f-rec 3) 3)))
+
