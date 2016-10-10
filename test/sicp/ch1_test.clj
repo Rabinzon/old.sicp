@@ -17,3 +17,9 @@
 		(assert-equal (f-rec 5) 11)
 		(assert-equal (f-rec 3) 3)))
 
+(deftest ch1-1-16-test
+	(testing "fast-expt is failed"
+		(assert-equal (fast-expt 2 2) 4)
+		(assert-equal (fast-expt 36 2) 1296)))
+
+
