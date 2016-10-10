@@ -27,3 +27,16 @@
 			(f-rec (- n 2))
 			(f-rec (- n 3)))))
 ;; end 1.11
+
+;; ex 1.16
+
+(defn fast-expt-iter [x, degree, acc] 
+	(if (= degree 0) acc
+		(if (even? x) 
+			(fast-expt-iter x (- degree 2) (* acc (sqr x)))
+			(fast-expt-iter x (dec degree) (* acc x)))))
+
+(defn fast-expt [x, degree]
+	(fast-expt-iter x degree 1))
+
+;; end 1.16
