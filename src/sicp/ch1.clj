@@ -32,7 +32,7 @@
 
 (defn fast-expt-iter [x, degree, acc] 
 	(if (= degree 0) acc
-		(if (even? x) 
+		(if (even? degree) 
 			(fast-expt-iter x (- degree 2) (* acc (sqr x)))
 			(fast-expt-iter x (dec degree) (* acc x)))))
 
