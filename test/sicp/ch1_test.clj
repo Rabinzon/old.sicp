@@ -29,6 +29,13 @@
 		(assert-equal (fast-expt 2 2) 4)
 		(assert-equal (fast-expt 36 2) 1296)))
 
+(deftest ch1-1-17-test
+	(testing "multiply is failed"
+		(assert-equal (multiply 2 2) 4)
+		(assert-equal (multiply 5 5) 25)
+		(assert-equal (multiply 100 100) 10000)
+		(assert-equal (multiply 9 9) 81)))
+
 (deftest ch1-1-7-test
 	(testing "sqrt is failed"
 		(assert-equal (sqrt 2) 1.4166666666666665)
