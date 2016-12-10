@@ -55,12 +55,11 @@
 	(defn improve [guess, x]
 		(average guess (/ x guess)))
 
-	(defn sqrt-iter [guess, x]
-		(if (good-enough? guess x) guess
-			(sqrt-iter (improve guess x) x)))
-	(sqrt-iter 1.0 x))
-
-
+	(defn sqrt-iter [ch, guess, x]
+		(if (< ch 0.00001) guess
+			(if (good-enough? guess x) guess
+				(sqrt-iter (- (improve guess x) guess) (improve guess x) x))))
+	(sqrt-iter 1.0 1.0 x))
 ;; end 1.7
 
 ;; 1.8
@@ -83,3 +82,5 @@
 			(cube-iter (improve guess x) x)))
 	(cube-iter 1.0 x))
 ;; end 1.8
+(defn -main [& args]
+	(print (sqrt 1000)))

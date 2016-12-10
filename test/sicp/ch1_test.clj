@@ -22,6 +22,12 @@
 		(assert-equal (fast-expt 2 2) 4)
 		(assert-equal (fast-expt 36 2) 1296)))
 
+(deftest ch1-1-7-test
+	(testing "sqrt is failed"
+		(assert-equal (sqrt 2) 1.4166666666666665)
+		(assert-equal (sqrt 1000) 251.249000999001)
+		(assert-equal (sqrt 14) 4.683333333333334)))
+
 (deftest ch1-1-8-test
 	(testing "cube-root is failed"
 		(assert-equal (cube-root 9) 2.0801227065868515)
