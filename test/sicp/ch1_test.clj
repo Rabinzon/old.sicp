@@ -17,6 +17,13 @@
 		(assert-equal (f-rec 5) 11)
 		(assert-equal (f-rec 3) 3)))
 
+(deftest ch1-1-12-test
+	(testing "pascal-triangle is failed"
+		(assert-equal (pascal-triangle 8 3) 56)
+		(assert-equal (pascal-triangle 10 5) 252)
+		(assert-equal (pascal-triangle 7 5) 21)
+		(assert-equal (pascal-triangle 6 2) 15)))
+
 (deftest ch1-1-16-test
 	(testing "fast-expt is failed"
 		(assert-equal (fast-expt 2 2) 4)
