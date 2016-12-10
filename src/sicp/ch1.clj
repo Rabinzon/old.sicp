@@ -51,6 +51,14 @@
 
 ;; end 1.16
 
+;; 1.17
+(defn multiply [x, y]
+	(defn iter [acc, a, b]
+		(if (= b 0) acc
+			(iter (+ acc a) a (- b 1))))
+	(iter 0 x y))
+;; end 1.17
+
 ;; ex 1.7
 (defn abs [x]
 	(if (> x 0) x (* -1 x)))
@@ -93,4 +101,4 @@
 	(cube-iter 1.0 x))
 ;; end 1.8
 (defn -main [& args]
-	(println (pascal-triangle 8 3)))
+	(println (multiply 5 5)))
