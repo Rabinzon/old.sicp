@@ -53,6 +53,13 @@
 
 ;; 1.17
 (defn multiply [x, y]
+	(if (= y 0) 0
+		(if (even? y)
+			(multiply (+ x x) (/ y 2))
+			(+ x (multiply x (- y 1))))))
+
+
+(defn multiply-fast [x, y]
 	(defn iter [acc, a, b]
 		(if (= b 0) acc
 			(iter (+ acc a) a (- b 1))))
@@ -101,4 +108,4 @@
 	(cube-iter 1.0 x))
 ;; end 1.8
 (defn -main [& args]
-	(println (multiply 5 5)))
+	(println (multiply-fast 5 3)))
