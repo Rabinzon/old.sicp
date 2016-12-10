@@ -28,6 +28,16 @@
 			(f-rec (- n 3)))))
 ;; end 1.11
 
+;; ex 1.12
+(defn	factorial [x]
+	(if (= x 1) x
+	(* (factorial (- x 1)) x)))
+
+(defn pascal-triangle [x, y]
+	(/ (factorial x)
+		(* (factorial y) (factorial (- x y)))))
+;; end ex 1.12
+
 ;; ex 1.16
 
 (defn fast-expt-iter [x, degree, acc]
@@ -83,4 +93,4 @@
 	(cube-iter 1.0 x))
 ;; end 1.8
 (defn -main [& args]
-	(print (sqrt 1000)))
+	(println (pascal-triangle 8 3)))
