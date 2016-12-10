@@ -22,4 +22,9 @@
 		(assert-equal (fast-expt 2 2) 4)
 		(assert-equal (fast-expt 36 2) 1296)))
 
-
+(deftest ch1-1-8-test
+	(testing "cube-root is failed"
+		(assert-equal (cube-root 9) 2.0801227065868515)
+		(assert-equal (cube-root 100) 4.641603653712197)
+		(assert-equal (cube-root 1) 1.0)
+		(assert-equal (cube-root 39) 3.391230593997027)))
