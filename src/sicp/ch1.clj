@@ -115,6 +115,11 @@
 		(f (f x))))
 ;; end 1.41
 
-(defn -main [& args]
-	(println (((doublefn (doublefn doublefn)) inc) 5)))
+;; ex 1.42
 
+(defn compose [f, g]
+    (fn [x] (f(g x))))
+;; end 1.42
+
+(defn -main [& args]
+    (println ((compose inc inc) 2)))
