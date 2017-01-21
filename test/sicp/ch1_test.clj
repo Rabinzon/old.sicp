@@ -48,3 +48,8 @@
 		(assert-equal (cube-root 100) 4.641603653712197)
 		(assert-equal (cube-root 1) 1.0)
 		(assert-equal (cube-root 39) 3.391230593997027)))
+
+(deftest ch1-1-41-test
+	(testing "doublefn(ex 1.41) is failed"
+			 (assert-equal (((doublefn (doublefn doublefn)) inc) 5) 21)
+			 (assert-equal ((doublefn inc) 1) 3)))
