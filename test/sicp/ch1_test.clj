@@ -53,3 +53,8 @@
 	(testing "doublefn(ex 1.41) is failed"
 			 (assert-equal (((doublefn (doublefn doublefn)) inc) 5) 21)
 			 (assert-equal ((doublefn inc) 1) 3)))
+
+(deftest ch1-1-42-test
+	(testing "compose(ex 1.42) is failed"
+			 (assert-equal ((compose inc inc) 2) 4)))
+
