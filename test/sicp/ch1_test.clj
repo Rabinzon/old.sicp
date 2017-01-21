@@ -54,7 +54,12 @@
 			 (assert-equal (((doublefn (doublefn doublefn)) inc) 5) 21)
 			 (assert-equal ((doublefn inc) 1) 3)))
 
+
 (deftest ch1-1-42-test
 	(testing "compose(ex 1.42) is failed"
 			 (assert-equal ((compose inc inc) 2) 4)))
+
+(deftest ch1-1-43-test
+	(testing "repeated(ex 1.43) is failed"
+			 (assert-equal ((repeated (fn [x](* x x)) 2) 5) 625)))
 

@@ -121,5 +121,15 @@
     (fn [x] (f(g x))))
 ;; end 1.42
 
+;; ex 1.43
+(defn repeated [f, y]
+    (defn iter [fx, x, z]
+      (if (= x 0)
+        (fx z)
+		  (iter (compose fx f) (- x 2) z)))
+    (fn [z] (iter f y z)))
+;; end 1.43
+
 (defn -main [& args]
-    (println ((compose inc inc) 2)))
+    (println ((repeated (fn [x](* x x)) 2) 5)))
+
