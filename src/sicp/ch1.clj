@@ -107,5 +107,14 @@
 			(cube-iter (improve guess x) x)))
 	(cube-iter 1.0 x))
 ;; end 1.8
+
+;; ex 1.41
+
+(defn doublefn [f]
+	(fn [x]
+		(f (f x))))
+;; end 1.41
+
 (defn -main [& args]
-	(println (multiply-fast 5 3)))
+	(println (((doublefn (doublefn doublefn)) inc) 5)))
+
