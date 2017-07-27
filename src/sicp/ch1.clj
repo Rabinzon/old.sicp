@@ -130,6 +130,24 @@
     (fn [z] (iter f y z)))
 ;; end 1.43
 
+(defn multiply_rp[x, y]
+	(letfn [(divide [q] (/ q 2))
+			(multiply [q] (* q 2))
+			(floor [x] (int (Math/floor x)))
+			(even [f, k]
+				  (if (= f 1) k
+					  (multiply_rp (divide f) (multiply k)))
+			)
+			(odd [f, k, sum]
+				(let [first (floor (divide f))
+					second (floor (multiply k))]
+				(if (= f 1) (+ sum k)
+				(if (not= (mod f 2) 0)
+					(odd first second ( + sum k))
+					(odd first second sum)))))]
+
+		(if (or (even? x) (even? y))
+			(even x y)(odd x y 0))	))
 (defn -main [& args]
-    (println ((repeated (fn [x](* x x)) 2) 5)))
+	(println (multiply_rp 32 23)))
 
