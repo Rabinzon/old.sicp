@@ -36,6 +36,13 @@
 		(assert-equal (multiply 100 100) 10000)
 		(assert-equal (multiply 9 9) 81)))
 
+(deftest ch1-1-18-test
+	(testing "multiply_rp(ex 1.18) is failed"
+		(assert-equal (multiply_rp 2 2) 4)
+		(assert-equal (multiply_rp 32 13) 416)
+		(assert-equal (multiply_rp 19 17) 323)
+		(assert-equal (multiply_rp 11 5) 55)))
+
 (deftest ch1-1-7-test
 	(testing "sqrt is failed"
 		(assert-equal (sqrt 2) 1.4166666666666665)
@@ -63,3 +70,6 @@
 	(testing "repeated(ex 1.43) is failed"
 			 (assert-equal ((repeated (fn [x](* x x)) 2) 5) 625)))
 
+(deftest ch1-1-43-test
+	(testing "repeated(ex 1.43) is failed"
+			 (assert-equal ((repeated (fn [x](* x x)) 2) 5) 625)))
